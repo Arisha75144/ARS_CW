@@ -34,6 +34,20 @@ def test_cover_by_circles():
     assert c1.center.x, c1.center.y == (2, 2)
     assert c2.center.x, c2.center.y == (7, 7)
 
-
+def test_find_center_point():
+     db = {
+        'points': [
+            Point(1, 1),
+            Point(2, 2),
+            Point(3, 3),
+            Point(4, 4),
+            Point(5, 5),
+            Point(6, 6),
+            Point(7, 7),
+            Point(8, 8)
+            ]
+        }
+         x1, y1 = find_center_point(db.get('points'))
+    assert x1.center.x, y1.center.y == (4.5,4.5)
 def test_sample():
     assert 0 == 0
